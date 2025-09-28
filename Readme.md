@@ -68,14 +68,7 @@ group by type,rating
 ) as t1
 where ranking =1;
 
-'SELECT 
-     type,
-	 rating,
-	 count(*),
-	 rank() over(partition by type order by count(*) desc)
-	 as ranking
-from netflix 
-group by type,rating'
+
 ```
 
 3.**List all the movies released in a specific year(e.g.,2020)**:
